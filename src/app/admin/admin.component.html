@@ -1,0 +1,22 @@
+<div  style="text-align:center">
+  <h1>
+    {{'cInternational'| translate}}
+  </h1>
+
+
+    <button mat-button color="warn" class="logout" (click)="logout()">
+      Logout
+    </button>
+    
+    <button  mat-button routerLink="/mensa"><mat-icon>dining</mat-icon>
+    {{'cMensaText' | translate}}
+    </button>
+  <br><br>
+  <button  mat-button routerLink="/accommodation"><mat-icon>apartment</mat-icon>
+    {{'cAccommodation'|translate}}</button>
+  <br><br>
+  <button  mat-button routerLink="/news"><mat-icon>newspaper</mat-icon>{{'cNews'|translate}}</button>
+  <br><br>
+  <button  mat-button routerLink="/events"><mat-icon>events</mat-icon>{{'cEvents'|translate}}</button>
+  
+</div>

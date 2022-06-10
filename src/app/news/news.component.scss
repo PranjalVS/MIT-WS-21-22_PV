@@ -1,0 +1,39 @@
+#roomstable1 {
+    width: 100%;
+}
+
+.inboxContainer {
+    width: 40vw;
+    height: 60vh;
+    border: 1px solid black;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    font-size: small;
+}
+.newsHeader {
+    width: 40vw;
+    height: 80vh;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+}
+tr {display: inline-block;}
+
+mat-table {
+    //display: flex;
+    flex-direction: row;
+  }
+  
+  mat-row, mat-header-row {
+    flex-direction: column;
+    margin: 10px;
+  }

@@ -1,0 +1,59 @@
+
+<div id="d1">
+  <h2>{{'cLoginText'|translate}}</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <mat-label>{{'cUtype'|translate}}</mat-label>
+    <br>
+    
+      <p [ngClass]="{ 'has-error': isSubmitted && formControls.usertype.errors }">
+      
+      <mat-select  style="width:10vw;" type="usertype" [(ngModel)]="usertype" placeholder="usertype" formControlName="usertype"
+        (ngModelChange)="selectCng($event)">
+        <mat-option *ngFor="let use of users"  [value]="use.viewValue">
+          {{use.viewValue}}
+        </mat-option>
+      </mat-select>
+
+    </p>
+    <div *ngIf="isSubmitted && formControls.usertype.errors">
+    <div *ngIf="formControls.usertype.errors.required">{{'cUterror'|translate}}</div>
+    </div>
+
+  
+  <!--
+  <p [ngClass]="{ 'has-error': isSubmitted && formControls.usertype.errors }">
+    <input matInput type="usertype" [(ngModel)]="usertype" placeholder="Admin/Student" formControlName="usertype"/>
+  </p>
+  <div *ngIf="isSubmitted && formControls.usertype.errors">
+  <div *ngIf="formControls.usertype.errors.required">Usertype is required</div>
+  </div>
+  -->
+
+    <p [ngClass]="{ 'has-error': isSubmitted && formControls.username.errors }">
+      <input matInput type="username" [(ngModel)]="username" placeholder="Username" formControlName="username"/>
+    </p>
+    <div *ngIf="isSubmitted && formControls.username.errors">
+    <div *ngIf="formControls.username.errors.required">{{'cUnerror'|translate}}</div>
+    </div>
+
+    <p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
+      <input matInput type="email" [(ngModel)]="email" placeholder="E-Mail" formControlName="email"/>
+    </p>
+    <div *ngIf="isSubmitted && formControls.email.errors">
+    <div *ngIf="formControls.email.errors.required">{{'cEerror'|translate}}</div>
+    </div>
+
+    <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
+      <input matInput type="password" [(ngModel)]="password" placeholder="Password" formControlName="password"/>
+    </p> 
+    <div *ngIf="isSubmitted && formControls.password.errors">
+    <div *ngIf="formControls.password.errors.required">{{'cPerror'|translate}}</div>
+    </div>
+
+    <p>
+      <button mat-raised-button type="submit" class="login" >LOGIN</button>
+      
+    </p>
+    <p>{{'cRnot'|translate}} <button mat-raised-button (click)="openDialog()">{{'cReg'|translate}}</button></p>
+  </form>
+</div>

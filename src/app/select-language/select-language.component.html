@@ -1,0 +1,20 @@
+<!-- <mat-form-field #langFormField appearance="fill">
+   <mat-label>{{langView}}</mat-label>
+        <mat-select #langSelect [(value)]="currLangViewValue" (selectionChange)="changeLanguage($event.value)">
+        <mat-option *ngFor="let lang of languages" [value]="lang.value"
+            [attr.selected]='en'
+        >
+        {{lang.viewValue}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+-->
+<a href="#" mat-button  (click)="changeLanguage('en')">EN</a>
+<a href="#" mat-button >|</a>
+<a href="#" mat-button (click)="changeLanguage('de')">DE</a>
+
+<!--
+    "lang === translate.currentLang ? '' : null"
+
+[attr.selected]="lang === translate.currentLang ? '' : null"
+-->

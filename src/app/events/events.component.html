@@ -1,0 +1,56 @@
+<h1 style="align-content:center;">{{'cEventcal'|translate}} </h1>
+
+   
+
+<div>
+        <mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+            <!-- ID Column -->
+            <ng-container matColumnDef="demo-id">
+              <mat-header-cell *matHeaderCellDef> Unique ID </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element._id}} </mat-cell>
+            </ng-container>
+            <!-- Event Name Column -->
+            <ng-container matColumnDef="name">
+              <mat-header-cell *matHeaderCellDef> Name. </mat-header-cell>
+              <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+            </ng-container>
+            <!-- Event Date Column -->
+            <ng-container matColumnDef="date">
+              <mat-header-cell *matHeaderCellDef> Date. </mat-header-cell>
+              <mat-cell *matCellDef="let element">{{element.date}}</mat-cell>
+            </ng-container>
+            <!-- Event time Column -->
+            <ng-container matColumnDef="time">
+              <mat-header-cell *matHeaderCellDef> Time </mat-header-cell>
+              <mat-cell *matCellDef="let element">{{element.time}} </mat-cell>             
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns:displayedColumns;"></mat-row>
+
+          </mat-table>
+          
+
+    <div *ngIf="isAdmin">
+      <br>
+      <div><mat-label>{{'cDele'|translate}}</mat-label></div>
+      <input matInput  required [(ngModel)]="eventId" [value]="eventId" size=50 placeholder="Event ID To Be Deleted / Zu löschende Ereignis-ID" />
+      <br>
+      <button mat-raised-button (click)="deleteEvent()">{{'cDele'|translate}}</button>
+    </div>
+    <br>
+    
+    <div *ngIf="isAdmin">
+      <form [formGroup]="EventForm" (ngSubmit)="addEvent()">
+        <div><mat-label>{{'cAddEvent'|translate}}</mat-label></div>
+        <div >
+      
+            <input matInput  required [(ngModel)]="name" [value]="name" placeholder="Event Name" formControlName="name" />
+            <input matInput  required [(ngModel)]="date" [value]="date" placeholder="Event Date" formControlName="date"/>
+            <input matInput  required [(ngModel)]="time" [value]="time" placeholder="Event Time" formControlName="time"/>
+            <button mat-raised-button type="submit"  >{{'cAddEvent'|translate}}</button>
+        </div>
+      </form>
+    </div>
+
+</div>

@@ -1,0 +1,9 @@
+#mff1 {width: 30vw}
+
+.logout{
+    position: absolute;
+    right: 150px;
+    width: 200px;
+    height: 1px;
+    font-weight: bold;
+}

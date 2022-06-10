@@ -1,0 +1,29 @@
+<!--
+<h1 mat-dialog-title>Hello {{data.username}}, please register with the following data</h1>
+<div mat-dialog-content appearance="fill">
+  <p>Enter your username, usertype, email and password</p>
+ -->
+ <div>
+  <p>{{'cRegister'|translate}}</p>
+  <mat-form-field appearance="fill">
+    <mat-label>{{'cUsertype'|translate}}</mat-label>
+    <input matInput [(ngModel)]="data.usertype" placeholder="User:Admin/Student" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>{{'cUname'|translate}}</mat-label>
+    <input matInput [(ngModel)]="data.username" placeholder="Username" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>E-Mail</mat-label>
+   <input matInput [(ngModel)]="data.email" placeholder="Email" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>{{'cPass'|translate}}</mat-label>
+    <input matInput [(ngModel)]="data.password" placeholder="Password" />
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">{{'cNot'|translate}}</button>
+  <button mat-button [mat-dialog-close]="data.password" cdkFocusInitial>Okay</button> 
+</div>
