@@ -3,7 +3,6 @@
 Project for Modern Internet Technology
 
 Topic : International Office
-Gitl Url : https://mygit.th-deg.de/pv22564/mit-ws-21-22_pv
 
 Team members :
  
@@ -13,18 +12,6 @@ Team members :
 
 **International Office App for THD**
 
-
-**Team members**
-
-
-| Group Member      | Matriculation Number |
-| ----------------- | -------------------- |
-| Pranjal Vaste     | 22104564             |
-| Shreena Gabani    | 22100203		   |
-
-
-**Git Repository**
-https://mygit.th-deg.de/pv22564/mit-ws-21-22_pv
 
 **Documentation**
 •	Documentation – mit-ws-21-22_pv/documentation
@@ -67,21 +54,6 @@ Admin account can be added in the following steps.
 1.	go to http://localhost:4200/register and choose user type as "Admin".
 2.	For normal user create account with user type as "Student".
 
-**Task division by members**
-
-| Task            | Done by |
-| ----------------- | -------------------- |
-| Login (Backend, frontend, database) | Pranjal Vaste |
-| Registration (Backend, frontend, database) | Pranjal Vaste |
-| Authentication guard service | Pranjal Vaste |
-| Language component | Pranjal Vaste |
-| Backend setup, code structure and refactoring | Pranjal Vaste |
-| Authentication events and services | Pranjal Vaste |
-| Header component, logo | Shreena Gabani |
-| News | Shreena Gabani |
-| Events| Shreena Gabani |
-| Mensa  | Shreena Gabani |
-| Frontend code refactoring and Interfaces | Shreena Gabani |
 
 
 
